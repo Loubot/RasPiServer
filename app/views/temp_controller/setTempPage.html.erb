@@ -1,0 +1,10 @@
+<section>
+  <%= label_tag 'Room No.' %>
+  <%= select_tag "count", "<option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option>".html_safe %>
+  <%= form_for setTemp_path,  remote: :true, method: 'get' do %>
+    <%= label_tag 'Set temp' %>
+    <input id="data"></input>
+    <button id="pressB">Submit</button>
+  <% end %>
+
+</section>

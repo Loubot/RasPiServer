@@ -1,5 +1,5 @@
 class TempControllerController < ApplicationController
-
+  require 'spreadsheet'
   
   def getTemp
     if SetTemp.exists?(room:params[:data])
@@ -51,5 +51,13 @@ class TempControllerController < ApplicationController
     @room2Current = checkRoomExists(2)
     @room3Current = checkRoomExists(3)
     @room4Current = checkRoomExists(4)
+  end
+
+  def doSheet
+
+    populateExcel()
+
+
+    render json: 'ok'
   end
 end

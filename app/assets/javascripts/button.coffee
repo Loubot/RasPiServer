@@ -9,6 +9,11 @@ $(document).ready ->
       data: { data: [room, reading] }
       type:'post'
 
+  $('#xl').on 'click', ->
+    $.ajax
+      url:'http://localhost:3000/doSheet.json'
+      type:'get'
+
 window.setTemp = (roomNo) ->
   reading = $("#room#{roomNo}Input").val()
   $.ajax

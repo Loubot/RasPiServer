@@ -6,6 +6,8 @@ Temperature::Application.routes.draw do
 
   get 'getTemp'         => 'temp_controller#getTemp',           :as => 'getTemp'
 
+  get 'doSheet'         => 'temp_controller#doSheet',           :as => 'doSheet'
+
   post 'setTemp'        => 'temp_controller#setTemp',           :as => 'setTemp'
 
   post 'logTemp'        => 'temp_controller#logTemp',           :as => 'logTemp'

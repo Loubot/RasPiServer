@@ -50,13 +50,13 @@ class TempControllerController < ApplicationController
   end
 
   def showRooms
-    @room1Current= TempLog.where(room:'room1').last
-    @room2Current= TempLog.where(room:'room2').last
-    @room3Current= TempLog.where(room:'room3').last
-    @room4Current= TempLog.where(room:'room4').last
-    @room1Temp = SetTemp.where(room:'room1')
-    @room2Temp = SetTemp.where(room:'room2')
-    @room3Temp = SetTemp.where(room:'room3')
-    @room4Temp = SetTemp.where(room:'room4')
+    @room1Temp = checkLogExists(1)
+    @room2Temp = checkLogExists(2)
+    @room3Temp = checkLogExists(3)
+    @room4Temp = checkLogExists(4)
+    @room1Current = checkRoomExists(1)
+    @room2Current = checkRoomExists(2)
+    @room3Current = checkRoomExists(3)
+    @room4Current = checkRoomExists(4)
   end
 end

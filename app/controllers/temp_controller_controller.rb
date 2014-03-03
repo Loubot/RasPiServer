@@ -1,13 +1,6 @@
 class TempControllerController < ApplicationController
 
-  def room1
-    @temp = SetTemp.where(room: 'room1')
-    respond_to do |format|
-      format.html
-      format.json { render json: @temp[0].reading }
-    end
-  end
-
+  
   def getTemp
     if SetTemp.exists?(room:params[:data])
       tempObject = SetTemp.where(room:params[:data])

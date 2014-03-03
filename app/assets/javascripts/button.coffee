@@ -7,14 +7,14 @@ $(document).ready ->
     $.ajax
       url: 'http://localhost:3000/setTemp.json'
       data: { data: [room, reading] }
-      type:'get'
+      type:'post'
 
 window.setTemp = (roomNo) ->
   reading = $("#room#{roomNo}Input").val()
   $.ajax
     url: 'http://localhost:3000/setTemp.json'
     data: { data: [roomNo, reading] }
-    type: 'get'
+    type: 'post'
     timeout:3000
     success: (json) ->    
       location.reload()

@@ -9,12 +9,12 @@ class TempControllerController < ApplicationController
   end
 
   def getTemp
-    @desiredTemp = SetTemp.where(room:'room1')
-    @returnedTemp = @desiredTemp.to_json
-    respond_to do |format|
-      format.html
-      format.json { render json: @desiredTemp.to_json }
-    end
+    if SetTemp.exists?(room:params[:data])
+      tempObject = SetTemp.where(room:params[:data])
+      render json: tempObject[0].reading
+    else 
+     render  :json => {:error => 'nil'}, :status => :not_found
+   end    
   end
 
   def setTempPage

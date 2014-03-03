@@ -1,6 +1,7 @@
 module ExcelHelper
 
   def populateExcel()
+    File.new("C:\\Users\\angell\\Desktop\\example\\file.xls", 'w')
     Spreadsheet.client_encoding = 'UTF-8'
     book = Spreadsheet::Workbook.new
     sheet1 = book.create_worksheet :name => "TempLogs"

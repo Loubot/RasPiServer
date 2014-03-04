@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140228054053) do
+ActiveRecord::Schema.define(:version => 20140228055240) do
 
   create_table "set_temps", :force => true do |t|
     t.string   "room"

@@ -1,8 +1,8 @@
 class UserMailer < ActionMailer::Base
-  default from: "lllouis@yahoo.com"
+  default from: "louisangelini@gmail.com"
 
   def sendLogs()
-    attachments["Room_Temp_Logs.xls"] = File.read("C:\\Users\\angell\\Desktop\\example\\Room_Temp_Logs.xls")
-    mail(:to => 'louisangelini@gmail.com', :subject => "hello")
+    attachments["Room_Temp_Logs.xls"] = File.read("/home/louis/Desktop/Room_Temp_Logs.xls")
+    mail(:to => 'lynch1976michael@gmail.com', :subject => "hello")
   end
 end

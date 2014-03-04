@@ -1,7 +1,8 @@
 module ExcelHelper
 
   def populateExcel()
-    File.new("C:\\Users\\angell\\Desktop\\example\\Room_Temp_Logs.xls", 'w')
+    file = File.new("/home/louis/Desktop/Room_Temp_Logs.xls", 'w')
+    file.close
     Spreadsheet.client_encoding = 'UTF-8'
     book = Spreadsheet::Workbook.new
     sheet1 = book.create_worksheet :name => "TempLogs"
@@ -29,6 +30,7 @@ module ExcelHelper
     # row = sheet1.row(1)
     # row.push 'Me bollux'
 
-    book.write 'C:\Users\angell\Desktop\example\Room_Temp_Logs.xls'
+    book.write '/home/louis/Desktop/Room_Temp_Logs.xls'
+
   end
 end

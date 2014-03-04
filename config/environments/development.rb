@@ -37,14 +37,15 @@ Temperature::Application.configure do
 
   config.action_mailer.raise_delivery_errors = true
 
-  ActionMailer::Base.delivery_method = :smtp
-  ActionMailer::Base.smtp_settings = {
-    :address => "smtp.bizmail.yahoo.com",
-    :port => 587,
-    :domain => "yahoo.com",
-    :user_name => "lllouis@yahoo.com",
-    :password => "Football1" ,
-    :enable_starttls_auto => true,
-    :authentication => :plain
-  } 
+  config.action_mailer.delivery_method = :smtp
+  # Gmail SMTP server setup
+  config.action_mailer.smtp_settings = {
+        :address => "smtp.gmail.com",
+        :enable_starttls_auto => true,
+        :port => 587,
+        :domain => '@example.com',
+        :authentication => :plain,
+        :user_name => 'louisangelini@gmail.com',
+        :password => 'carocial2'
+  }
 end

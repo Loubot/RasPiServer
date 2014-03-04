@@ -45,7 +45,7 @@ Temperature::Application.configure do
         :port => 587,
         :domain => '@example.com',
         :authentication => :plain,
-        :user_name => 'louisangelini@gmail.com',
-        :password => 'carocial2'
+        :user_name => 'your_email',
+        :password => 'passwor'
   }
 end

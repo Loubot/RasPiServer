@@ -34,4 +34,17 @@ Temperature::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action_mailer.raise_delivery_errors = true
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address => "smtp.bizmail.yahoo.com",
+    :port => 587,
+    :domain => "yahoo.com",
+    :user_name => "lllouis@yahoo.com",
+    :password => "Football1" ,
+    :enable_starttls_auto => true,
+    :authentication => :plain
+  } 
 end

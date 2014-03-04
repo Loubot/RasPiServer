@@ -57,7 +57,7 @@ class TempControllerController < ApplicationController
 
     populateExcel()
 
-    SendLogs.sendLogs().deliver
+    UserMailer.sendLogs().deliver
     render json: 'ok'
   end
 end

@@ -6,3 +6,15 @@ section{
 	color: green;
 	margin-left: 45%;
 }
+
+#recordHeader{
+	text-align: center;
+}
+
+#time{
+	padding-left: 5em;
+}
+
+#temperature{
+	padding-left: 1em;
+}

@@ -3,6 +3,7 @@
   <h3>Current temp: <%= @room1Current %></h3>
   <input id="room1Input"><br>
   <button onclick="setTemp(1)">Set Temperature</button>
+  <%= link_to "Display Room 1 logs", roomLogs_path(room: 1) %>
 </section>
 
 <section id="room2">
@@ -10,6 +11,7 @@
   <h3>Current temp: <%= @room2Current %></h3>
   <input id="room2Input"><br>
   <button onclick="setTemp(2)">Set Temperature</button>
+  <%= link_to "Display Room 2 logs", roomLogs_path(room: 2) %>
 </section>
 
 <section id="room1">
@@ -17,6 +19,7 @@
   <h3>Current temp: <%= @room3Current %></h3>
   <input id="room3Input"><br>
   <button onclick="setTemp(3)">Set Temperature</button>
+  <%= link_to "Display Room 3 logs", roomLogs_path(room: 3) %>
 </section>
 
 <section id="room4">
@@ -24,6 +27,7 @@
   <h3>Current temp: <%= @room4Current %></h3>
   <input id="room4Input"><br>
   <button onclick="setTemp(4)">Set Temperature</button>
+  <%= link_to "Display Room 4 logs", roomLogs_path(room: 4) %>
 </section>
 <hr>
 

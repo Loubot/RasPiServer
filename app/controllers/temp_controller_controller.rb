@@ -6,7 +6,7 @@ class TempControllerController < ApplicationController
       tempObject = SetTemp.where(room:params[:data])
       render json: tempObject[0].reading
     else 
-     render  :json => {:error => 'nil'}, :status => :not_found
+     render  :json => {:error => 'nil'}, :status => 404
    end    
   end
 
@@ -53,6 +53,12 @@ class TempControllerController < ApplicationController
     @room4Current = checkRoomExists(4)
   end
 
+  def roomLogs
+    @roomNo = params[:room]
+    @roomRecords = TempLog.where(room: "room#{@roomNo}")
+    
+  end
+
   def doSheet
 
     populateExcel()
@@ -60,4 +66,6 @@ class TempControllerController < ApplicationController
     UserMailer.sendLogs().deliver
     render json: 'ok'
   end
+
+
 end

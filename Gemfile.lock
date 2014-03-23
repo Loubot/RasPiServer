@@ -49,6 +49,9 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.0.2)
+    gon (5.0.1)
+      actionpack (>= 2.3.0)
+      json
     hike (1.2.3)
     i18n (0.6.9)
     journey (1.0.4)
@@ -122,6 +125,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 3.2.1)
+  gon
   jquery-rails
   rack-cors
   rails (= 3.2.15)

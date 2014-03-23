@@ -56,6 +56,7 @@ class TempControllerController < ApplicationController
   def roomLogs
     @roomNo = params[:room]
     @roomRecords = TempLog.where(room: "room#{@roomNo}")
+    gon.roomRecords = @roomRecords
     
   end
 

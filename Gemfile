@@ -15,7 +15,7 @@ gem 'annotate'
 
 gem 'spreadsheet'
 
-gem 'ruport'
+
 
 
 # Gems used only for assets and not required

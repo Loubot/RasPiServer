@@ -1,3 +1,6 @@
+html, body{
+	height:100%;
+}
 section{
   border-style: groove;
 }
@@ -17,4 +20,11 @@ section{
 
 #temperature{
 	padding-left: 1em;
+}
+
+#records_chart{
+	margin-left: auto;
+	margin-right: auto;
+	height:80%;
+	width:80%;
 }

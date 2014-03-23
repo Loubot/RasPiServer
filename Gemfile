@@ -17,6 +17,8 @@ gem 'spreadsheet'
 
 gem 'gon'
 
+gem "highcharts-rails", "~> 3.0.0"
+
 
 # Gems used only for assets and not required
 # in production environments by default.

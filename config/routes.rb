@@ -10,8 +10,11 @@ Temperature::Application.routes.draw do
 
   get 'roomLogs'				=> 'temp_controller#roomLogs', 					:as => 'roomLogs'
 
+  get 'roomsGraph'			=> 'temp_controller#roomsGraph'					:as => 'roomsGraph'
+
   post 'setTemp'        => 'temp_controller#setTemp',           :as => 'setTemp'
 
   post 'logTemp'        => 'temp_controller#logTemp',           :as => 'logTemp'
+
   root :to => 'temp_controller#showRooms'
 end

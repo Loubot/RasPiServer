@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Temperature</title>
-  <%= javascript_include_tag 'highCharts' %>
-  <%= include_gon %>
+  <title>Temperature</title>  
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= include_gon %>
 </head>
 <body>
   <% flash.each do |key, value| %>

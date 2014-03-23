@@ -7,7 +7,7 @@ class TempControllerController < ApplicationController
       render json: tempObject[0].reading
     else 
      render  :json => {:error => 'nil'}, :status => 404
-   end    
+    end    
   end
 
   def setTempPage

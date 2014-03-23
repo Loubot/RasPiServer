@@ -1,41 +1,40 @@
 $(document).ready ->
 
-	if $('#recordHeader').height() > 0		
+	if $('#container').height() > 0		
 	  $("#container").highcharts
 		  chart:
-		    type: "bar"
+		    type: "line"
 
 		  title:
-		    text: "Fruit Consumption"
+		    text: "Log of Temperatures"
 
 		  xAxis:
-		    categories: [
-		      "Apples"
-		      "Bananas"
-		      "Oranges"
-		    ]
+		    categories: 
+		    	gon.timeRecords1
 
 		  yAxis:
 		    title:
-		      text: "Fruit eaten"
+		      text: "Temperature"
 
 		  series: [
 		    {
 		      name: "Room1"
-		      data: [
-		        1
-		        0
-		        4
-		      ]
+		      data: 
+		      	gon.roomRecords1
 		    }
 		    {
 		      name: "Room2"
-		      data: [
-		        5
-		        7
-		        3
-		      ]
+		      data: 
+		      	gon.roomRecords2
+		    }
+		    {
+		    	name: 'Room3'
+		    	data: gon.roomRecords3
+		    }
+		    {
+		    	name: 'Room4'
+		    	data: gon.roomRecords4
 		    }
 		  ]
 
-	alert JSON.stringify(gon.roomRecords)
+  console.log gon.timeRecords1.toString()

@@ -35,5 +35,8 @@ $(document).ready ->
 		    	name: 'Room4'
 		    	data: gon.roomRecords4
 		    }
+		    {
+		    	name: 'Room5'
+		    	data: gon.roomRecords5
+		    }
 		  ]
-	

@@ -19,4 +19,14 @@ module TempControllerHelper
     end
   end
 
+  def formatTime(timeStamp)
+    formattedTimes = []
+
+    timeStamp.each do |time|
+      formattedTime = time.strftime("%d %b. %Y %H:%M")
+      formattedTimes << formattedTime
+    end
+    formattedTimes
+  end
+
 end

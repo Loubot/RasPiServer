@@ -64,7 +64,9 @@ class TempControllerController < ApplicationController
     gon.roomRecords2 = TempLog.where(room: 'room2').pluck(:reading)
     gon.roomRecords3 = TempLog.where(room: 'room3').pluck(:reading)
     gon.roomRecords4 = TempLog.where(room: 'room4').pluck(:reading)
-    gon.timeRecords1 = TempLog.where(room: 'room4').pluck(:updated_at)
+    @timeRecords1 = TempLog.where(room: 'room1').pluck(:updated_at)
+    formattedTimes = formatTime(@timeRecords1)
+    gon.timeRecords1 = formattedTimes
     
   end
 

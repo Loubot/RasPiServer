@@ -37,4 +37,5 @@ $(document).ready ->
 		    }
 		  ]
 
-  console.log gon.timeRecords1.toString()
+	$(gon.timeRecords1).each ->
+  	console.log JSON.stringify @

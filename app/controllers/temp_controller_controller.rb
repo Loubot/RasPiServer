@@ -47,10 +47,12 @@ class TempControllerController < ApplicationController
     @room2Temp = checkLogExists(2)
     @room3Temp = checkLogExists(3)
     @room4Temp = checkLogExists(4)
+    
     @room1Current = checkRoomExists(1)
     @room2Current = checkRoomExists(2)
     @room3Current = checkRoomExists(3)
     @room4Current = checkRoomExists(4)
+    @room5Current = checkRoomExists(5)
   end
 
   def roomLogs

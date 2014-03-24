@@ -23,7 +23,7 @@ module TempControllerHelper
     formattedTimes = []
 
     timeStamp.each do |time|
-      formattedTime = time.strftime("%d %b. %Y %H:%M")
+      formattedTime = time.strftime("%Y %e %d %H:%M")
       formattedTimes << formattedTime
     end
     formattedTimes

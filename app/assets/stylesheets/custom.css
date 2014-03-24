@@ -5,9 +5,10 @@ section{
   border-style: groove;
 }
 
-#xl{
-	color: green;
-	margin-left: 45%;
+#buttons{
+	text-align: center;	
+	
+	
 }
 
 #recordHeader{
@@ -27,4 +28,30 @@ section{
 	margin-right: auto;
 	height:80%;
 	width:80%;
+}
+#roomsContainer{
+	height: 75%;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+#topContainer{
+	width:95%;
+	clear:both;
+}
+#middleContainer{
+	width:95%;
+	clear:both;
+}
+.room{
+	height: 25%;
+	float:left;
+	width:45%;
+}
+
+#external{
+	clear: both;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
 }

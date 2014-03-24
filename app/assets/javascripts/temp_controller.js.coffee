@@ -36,6 +36,4 @@ $(document).ready ->
 		    	data: gon.roomRecords4
 		    }
 		  ]
-
-	$(gon.timeRecords1).each ->
-  	console.log JSON.stringify @
+	

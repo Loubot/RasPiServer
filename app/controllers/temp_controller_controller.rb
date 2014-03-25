@@ -10,7 +10,7 @@ class TempControllerController < ApplicationController
     end    
   end
 
-  def setTempPage
+  def errorPage
 
   end
 
@@ -86,7 +86,8 @@ class TempControllerController < ApplicationController
       # send_file '/home/louis/Desktop/Room_Temp_Logs.xls'
       send_file '/home/pi/Desktop/Room_Temp_Logs.xls'
     rescue Exception => e
-      redirect_to '/errorPage'
+      flash[:danger] = 'Could not find file'
+      redirect_to :back
     end
     
 

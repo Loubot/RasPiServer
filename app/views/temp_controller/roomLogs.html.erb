@@ -1,0 +1,7 @@
+<% if @roomNo == '5' %>
+	<h3 id = "recordHeader">External temperature logs</h3>
+	<%= render @roomRecords %>
+<% else %>
+	<h3 id = "recordHeader">Records for room number <%= @roomNo %></h3>
+	<%= render @roomRecords %>
+<% end %>

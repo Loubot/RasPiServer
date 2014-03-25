@@ -1,6 +1,6 @@
 Temperature::Application.routes.draw do
   
-  get 'setTempPage'     => 'temp_controller#setTempPage',       :as => 'setTempPage'  
+  get 'errorPage'     	=> 'temp_controller#errorPage',       	:as => 'errorPage'  
 
   get 'showRooms'       => 'temp_controller#showRooms',         :as => 'showRooms'
 
@@ -8,9 +8,9 @@ Temperature::Application.routes.draw do
 
   get 'doSheet'         => 'temp_controller#doSheet',           :as => 'doSheet'
 
-  get 'roomLogs'				=> 'temp_controller#roomLogs', 					:as => 'roomLogs'
-
   get 'roomsGraph'			=> 'temp_controller#roomsGraph',				:as => 'roomsGraph'
+
+  get 'xlFile'					=> 'temp_controller#xlFile',						:as => 'xlFile'
 
   post 'setTemp'        => 'temp_controller#setTemp',           :as => 'setTemp'
 

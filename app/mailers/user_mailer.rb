@@ -3,6 +3,7 @@ class UserMailer < ActionMailer::Base
 
   def sendLogs()
     attachments["Room_Temp_Logs.xls"] = File.read("/home/pi/Desktop/Room_Temp_Logs.xls")
+    # attachments["Room_Temp_Logs.xls"] = File.read("/home/louis/Desktop/Room_Temp_Logs.xls")
     mail(:to => 'louisangelini@gmail.com', :subject => "hello")
   end
 end

@@ -84,6 +84,7 @@ class TempControllerController < ApplicationController
   def xlFile
     begin
       # send_file '/home/louis/Desktop/Room_Temp_Logs.xls'
+      populateExcel()
       send_file '/home/pi/Desktop/Room_Temp_Logs.xls'
     rescue Exception => e
       flash[:danger] = 'Could not find file'

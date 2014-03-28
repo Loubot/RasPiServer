@@ -33,7 +33,7 @@ class TempControllerController < ApplicationController
     roomData = params[:data]
     roomNo = 'room' + roomData[0]
     
-    TempLog.create(room:roomNo, reading: roomData[1])
+    TempLog.create(room:roomNo, reading: roomData[1].to_f)
     
     flash[:success] = params[:room]
     respond_to do |format|
@@ -62,11 +62,11 @@ class TempControllerController < ApplicationController
   end
 
   def roomsGraph
-    gon.roomRecords1 = TempLog.where(room: 'room1').pluck(:reading)
-    gon.roomRecords2 = TempLog.where(room: 'room2').pluck(:reading)
-    gon.roomRecords3 = TempLog.where(room: 'room3').pluck(:reading)
-    gon.roomRecords4 = TempLog.where(room: 'room4').pluck(:reading)
-    gon.roomRecords5 = TempLog.where(room: 'room5').pluck(:reading)
+    gon.roomRecords1 = TempLog.where(room: 'room1').pluck(:reading).collect { |x| x.to_f }
+    gon.roomRecords2 = TempLog.where(room: 'room2').pluck(:reading).collect { |x| x.to_f }
+    gon.roomRecords3 = TempLog.where(room: 'room3').pluck(:reading).collect { |x| x.to_f }
+    gon.roomRecords4 = TempLog.where(room: 'room4').pluck(:reading).collect { |x| x.to_f }
+    gon.roomRecords5 = TempLog.where(room: 'room5').pluck(:reading).collect { |x| x.to_f }
     @timeRecords1 = TempLog.where(room: 'room1').pluck(:updated_at)
     formattedTimes = formatTime(@timeRecords1)
     gon.timeRecords1 = formattedTimes

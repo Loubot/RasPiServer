@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+SetTemp.create(room:'room1', reading: 22)
+SetTemp.create(room:'room2', reading: 22)
+SetTemp.create(room:'room3', reading: 22)
+SetTemp.create(room:'room4', reading: 22)

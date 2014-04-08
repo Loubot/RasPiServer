@@ -5,17 +5,17 @@ gem 'rails', '3.2.15'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'sqlite3', '1.3.9'
 
-gem 'better_errors'
+gem 'better_errors', '1.0.1'
 
-gem "binding_of_caller"
+gem "binding_of_caller", '0.7.2'
 
-gem 'annotate'
+gem 'annotate', '2.6.0'
 
-gem 'spreadsheet'
+gem 'spreadsheet', '0.9.7'
 
-gem 'gon'
+gem 'gon', '5.0.1'
 
 gem "highcharts-rails", "~> 3.0.0"
 
@@ -32,9 +32,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '3.1.0'
 
-gem 'rack-cors', :require => 'rack/cors'
+gem 'rack-cors', '0.2.9', :require => 'rack/cors'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -6,7 +6,7 @@
       <input id="room1Input">
       <button onclick="setTemp(1)">Set Temperature</button><br>
       <%= link_to "Display Room 1 logs", roomLogs_path(room: 1) %>
-    </section>
+    </section> <!-- End of room room1 -->
 
     <section id="room2" class="room">
       <h3>Room 2 desired temp: <%= @room2Temp %></h3>
@@ -14,9 +14,10 @@
       <input id="room2Input">
       <button onclick="setTemp(2)">Set Temperature</button><br>
       <%= link_to "Display Room 2 logs", roomLogs_path(room: 2) %>
-    </section>
+    </section> <!-- End of room 2 -->
 
-  </div><br>
+  </div> <!-- End of topContainer -->
+  <br>
 
   <div id="middleContainer" >
     <section id="room3" class="room">
@@ -25,7 +26,7 @@
       <input id="room3Input">
       <button onclick="setTemp(3)">Set Temperature</button><br>
       <%= link_to "Display Room 3 logs", roomLogs_path(room: 3) %>
-    </section>
+    </section> <!-- End of room 3 -->
 
     <section id="room4" class="room">
       <h3>Room 4 desired temp: <%= @room4Temp %></h3>
@@ -33,9 +34,9 @@
       <input id="room4Input">
       <button onclick="setTemp(4)">Set Temperature</button><br>
       <%= link_to "Display Room 4 logs", roomLogs_path(room: 4) %>
-    </section>
+    </section> <!-- End of room 4 -->
 
-  </div>
+  </div> <!-- End of middleContainer -->
 
   <div id="external">
     <section id="room5"> 
@@ -44,8 +45,8 @@
       <%= link_to "Display external temperature logs", roomLogs_path(room: 5) %>
     </section>
   <hr>
-  </div>
-</div>
+  </div> <!-- end of external -->
+</div> <!-- end of roomsContainer -->
 
 <div id="buttons">
   <button id="xl">Send logs in email</button><br>

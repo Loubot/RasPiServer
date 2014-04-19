@@ -3,14 +3,13 @@ $(document).ready ->
 	if $('#container').height() > 0		
 	  $("#container").highcharts
 		  chart:
-		    type: "line"
+		    type: "spline"
 
 		  title:
 		    text: "Log of Temperatures"
 
 		  xAxis:
-		    categories: 
-		    	gon.timeRecords1
+		    type: 'datetime',
 
 		  yAxis:
 		    title:

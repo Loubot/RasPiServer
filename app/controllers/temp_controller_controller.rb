@@ -91,7 +91,7 @@ class TempControllerController < ApplicationController
     begin
       # send_file '/home/louis/Desktop/Room_Temp_Logs.xls'
       populateExcel()
-      send_file '/home/pi/Desktop/Room_Temp_Logs.xls'
+      send_file Rails.root.join('excel/Room_Temp_Logs.xls')
     rescue Exception => e
       flash[:danger] = 'Could not find file'
       redirect_to :back

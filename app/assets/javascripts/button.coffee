@@ -5,19 +5,21 @@ $(document).ready ->
     reading = $('#data').val()
     alert room
     $.ajax
-      url: 'http://localhost:3000/setTemp.json'
+      url: 'setTemp.json'
       data: { data: [room, reading] }
       type:'post'
+      timeout: 3000
 
   $('#xl').on 'click', ->
     $.ajax
-      url:'http://localhost:3000/doSheet.json'
+      url:'doSheet.json'
       type:'get'
+      timeout: 3000
 
 window.setTemp = (roomNo) ->
   reading = $("#room#{roomNo}Input").val()
   $.ajax
-    url: 'http://localhost:3000/setTemp.json'
+    url: 'setTemp.json'
     data: { data: [roomNo, reading] }
     type: 'post'
     timeout:3000

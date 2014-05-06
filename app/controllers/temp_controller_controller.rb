@@ -10,8 +10,8 @@ class TempControllerController < ApplicationController
     end    
   end
 
-  def errorPage
-
+  def checkOk
+    render json: 'ok'
   end
 
   def setTemp

@@ -18,5 +18,7 @@ Temperature::Application.routes.draw do
 
   post 'logTemp'        => 'temp_controller#logTemp',           :as => 'logTemp'
 
+  get 'checkOk'         => 'temp_controller#checkOk',           :as => 'checkOk'
+
   root :to => 'temp_controller#showRooms'
 end

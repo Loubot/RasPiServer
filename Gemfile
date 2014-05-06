@@ -38,6 +38,10 @@ gem 'rack-cors', '0.2.9', :require => 'rack/cors'
 
 gem 'thin'
 
+gem 'tar2rubyscript'
+
+gem 'rubyscript2exe'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

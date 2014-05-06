@@ -97,6 +97,7 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ruby-ole (1.2.11.7)
+    rubyscript2exe (0.5.3)
     sass (3.3.4)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -111,6 +112,7 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.9)
     sqlite3 (1.3.9-x86-mingw32)
+    tar2rubyscript (0.4.8)
     thin (1.6.2)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -139,8 +141,10 @@ DEPENDENCIES
   jquery-rails (= 3.1.0)
   rack-cors (= 0.2.9)
   rails (= 3.2.15)
+  rubyscript2exe
   sass-rails (~> 3.2.3)
   spreadsheet (= 0.9.7)
   sqlite3 (= 1.3.9)
+  tar2rubyscript
   thin
   uglifier (>= 1.0.3)

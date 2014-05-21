@@ -66,17 +66,17 @@ class TempControllerController < ApplicationController
     roomRecords2 = TempLog.where(room: 'room2').pluck(:reading).collect { |x| x.to_f }
     roomRecords3 = TempLog.where(room: 'room3').pluck(:reading).collect { |x| x.to_f }
     roomRecords4 = TempLog.where(room: 'room4').pluck(:reading).collect { |x| x.to_f }
-    roomRecords5 = TempLog.where(room: 'room4').pluck(:reading).collect { |x| x.to_f }
+    roomRecords5 = TempLog.where(room: 'room5').pluck(:reading).collect { |x| x.to_f }
     @timeRecords1 = TempLog.where(room: 'room1').pluck(:updated_at)
     @timeRecords2 = TempLog.where(room: 'room2').pluck(:updated_at)
     @timeRecords3 = TempLog.where(room: 'room3').pluck(:updated_at)
     @timeRecords4 = TempLog.where(room: 'room4').pluck(:updated_at)
-    @timeRecords5 = TempLog.where(room: 'room4').pluck(:updated_at)
+    @timeRecords5 = TempLog.where(room: 'room5').pluck(:updated_at)
     gon.roomRecords1= formatTime(@timeRecords1, roomRecords1)
     gon.roomRecords2 = formatTime(@timeRecords2, roomRecords2)
-    gon.roomRecords3 = formatTime(@timeRecords3, roomRecords2)
-    gon.roomRecords4 = formatTime(@timeRecords4, roomRecords2)
-    gon.roomRecords5 = formatTime(@timeRecords4, roomRecords2)
+    gon.roomRecords3 = formatTime(@timeRecords3, roomRecords3)
+    gon.roomRecords4 = formatTime(@timeRecords4, roomRecords4)
+    gon.roomRecords5 = formatTime(@timeRecords5, roomRecords5)
     
     
   end

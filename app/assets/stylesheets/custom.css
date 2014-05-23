@@ -6,9 +6,7 @@ section{
 }
 
 #buttons{
-	text-align: center;	
-	
-	
+	text-align: center;		
 }
 
 #recordHeader{
@@ -30,10 +28,12 @@ section{
 	width:80%;
 }
 #roomsContainer{
-	height: 75%;
+	height: 60%;
 	width: 90%;
+	min-height: 450px;
 	margin-right: auto;
 	margin-left: auto;
+	overflow:auto;
 }
 #topContainer{
 	width:95%;
@@ -51,6 +51,8 @@ section{
 	height: 25%;
 	float:left;
 	width:45%;
+	box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 10px;
+	margin-bottom: 1%;
 }
 
 #external{
@@ -58,6 +60,7 @@ section{
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
 }
 
 .alert-danger{

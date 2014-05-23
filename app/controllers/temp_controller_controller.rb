@@ -1,6 +1,6 @@
 class TempControllerController < ApplicationController
   require 'spreadsheet'
-  before_action :authenticate_user!
+  before_filter :authenticate_user!
   def getTemp
     if SetTemp.exists?(room:params[:data])
       tempObject = SetTemp.where(room:params[:data])
@@ -43,6 +43,7 @@ class TempControllerController < ApplicationController
   end
 
   def showRooms
+    @user = User.find(current_user)
     @room1Temp = checkLogExists(1)
     @room2Temp = checkLogExists(2)
     @room3Temp = checkLogExists(3)

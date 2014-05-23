@@ -34,6 +34,8 @@ end
 
 gem 'jquery-rails', '3.1.0'
 
+gem 'devise', '3.2.4'
+
 gem 'rack-cors', '0.2.9', :require => 'rack/cors'
 
 gem 'thin'

@@ -5,15 +5,15 @@
       <h3>Current temp: <%= @room1Current %></h3>
       <input id="room1Input">
       <button onclick="setTemp(1)">Set Temperature</button><br>
-      <%= link_to "Display Room 1 logs", roomLogs_path(room: 1) %>
+      <%= link_to "Display Living Room logs", roomLogs_path(room: 1) %>
     </section> <!-- End of room room1 -->
 
     <section id="room2" class="room">
-      <h3>Room 2 desired temp: <%= @room2Temp %></h3>
+      <h3>Kitchen desired temp: <%= @room2Temp %></h3>
       <h3>Current temp: <%= @room2Current %></h3>
       <input id="room2Input">
       <button onclick="setTemp(2)">Set Temperature</button><br>
-      <%= link_to "Display Room 2 logs", roomLogs_path(room: 2) %>
+      <%= link_to "Display Kitchen logs", roomLogs_path(room: 2) %>
     </section> <!-- End of room 2 -->
 
   </div> <!-- End of topContainer -->
@@ -21,19 +21,19 @@
 
   <div id="middleContainer" >
     <section id="room3" class="room">
-      <h3>Room 3 desired temp: <%= @room3Temp %></h3>
+      <h3>Bedroom 1 desired temp: <%= @room3Temp %></h3>
       <h3>Current temp: <%= @room3Current %></h3>
       <input id="room3Input">
       <button onclick="setTemp(3)">Set Temperature</button><br>
-      <%= link_to "Display Room 3 logs", roomLogs_path(room: 3) %>
+      <%= link_to "Display Bedroom 1 logs", roomLogs_path(room: 3) %>
     </section> <!-- End of room 3 -->
 
     <section id="room4" class="room">
-      <h3>Room 4 desired temp: <%= @room4Temp %></h3>
+      <h3>Bedroom 2 desired temp: <%= @room4Temp %></h3>
       <h3>Current temp: <%= @room4Current %></h3>
       <input id="room4Input">
       <button onclick="setTemp(4)">Set Temperature</button><br>
-      <%= link_to "Display Room 4 logs", roomLogs_path(room: 4) %>
+      <%= link_to "Display bedroom 2 logs", roomLogs_path(room: 4) %>
     </section> <!-- End of room 4 -->
 
   </div> <!-- End of middleContainer -->
@@ -52,4 +52,7 @@
   <button id="xl">Send logs in email</button><br>
   <%= button_to 'Graph', roomsGraph_path, :method => 'get' %>
   <%= button_to 'Download logs', xlFile_path, :method => 'get' %>
+  <p > <%= @user.email %> logged in</p>
+  <%= button_to 'Log out', destroy_user_session_path, :method => 'delete' %>
 </div>
+

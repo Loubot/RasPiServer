@@ -17,25 +17,25 @@ $(document).ready ->
 
 		  series: [
 		    {
-		      name: "Room1"
+		      name: "Living Room"
 		      data: 
 		      	gon.roomRecords1
 		    }
 		    {
-		      name: "Room2"
+		      name: "Kitchen"
 		      data: 
 		      	gon.roomRecords2
 		    }
 		    {
-		    	name: 'Room3'
+		    	name: 'Bedroom 1'
 		    	data: gon.roomRecords3
 		    }
 		    {
-		    	name: 'Room4'
+		    	name: 'Bedroom 2'
 		    	data: gon.roomRecords4
 		    }
 		    {
-		    	name: 'Room5'
+		    	name: 'External'
 		    	data: gon.roomRecords5
 		    }
 		  ]

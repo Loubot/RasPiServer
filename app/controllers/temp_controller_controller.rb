@@ -1,6 +1,6 @@
 class TempControllerController < ApplicationController
   require 'spreadsheet'
-  
+  before_action :authenticate_user!
   def getTemp
     if SetTemp.exists?(room:params[:data])
       tempObject = SetTemp.where(room:params[:data])

@@ -1,8 +1,10 @@
 Temperature::Application.routes.draw do
   
+  devise_for :users
+
   #devise_for :installs
 
-  devise_for :users
+  #devise_for :users
 
   get 'errorPage'     	=> 'temp_controller#errorPage',       	:as => 'errorPage'  
 

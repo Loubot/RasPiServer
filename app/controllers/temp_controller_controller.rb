@@ -18,7 +18,7 @@ class TempControllerController < ApplicationController
   def getCurrent
     if TempLog.exists?(room:params[:data])
       current = TempLog.where(room: params[:data]).last
-      render json: current
+      render json: { :reading => current.reading, :updated_at => current.updated_at.strftime('%H:%M %m/%d/%Y') }
     else 
       render json: "Can't get record"
     end

@@ -22,9 +22,9 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :rememberable, :timeoutable and :omniauthable
+  # :confirmable, :lockable, :rememberable,  and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable,  :trackable, :validatable
+         :recoverable,  :trackable, :validatable, :timeoutable
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me

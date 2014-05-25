@@ -26,5 +26,7 @@ Temperature::Application.routes.draw do
 
   get 'checkOk'         => 'temp_controller#checkOk',           :as => 'checkOk'
 
+  get 'getCurrent'      => 'temp_controller#getCurrent',        :as =>  'getCurrent'
+
   root :to => 'temp_controller#showRooms'
 end

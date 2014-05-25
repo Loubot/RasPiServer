@@ -2,7 +2,7 @@
   <div id="topContainer">
     <section id="room1" class="room">
       <h3>Living Room desired temp: <%= @room1Temp %></h3>
-      <h3>Current temp: <%= @room1Current %></h3>
+      <h3>Current temp: <span id="room1Reading"><%= @room1Current %></span></h3>
       <input id="room1Input">
       <button onclick="setTemp(1)">Set Temperature</button><br>
       <%= link_to "Display Living Room logs", roomLogs_path(room: 1) %>
@@ -10,7 +10,7 @@
 
     <section id="room2" class="room">
       <h3>Kitchen desired temp: <%= @room2Temp %></h3>
-      <h3>Current temp: <%= @room2Current %></h3>
+      <h3>Current temp: <span id="room2Reading"><%= @room2Current %></span></h3>
       <input id="room2Input">
       <button onclick="setTemp(2)">Set Temperature</button><br>
       <%= link_to "Display Kitchen logs", roomLogs_path(room: 2) %>
@@ -22,7 +22,7 @@
   <div id="middleContainer" >
     <section id="room3" class="room">
       <h3>Bedroom 1 desired temp: <%= @room3Temp %></h3>
-      <h3>Current temp: <%= @room3Current %></h3>
+      <h3>Current temp: <span id="room3Reading"><%= @room3Current %></span></h3>
       <input id="room3Input">
       <button onclick="setTemp(3)">Set Temperature</button><br>
       <%= link_to "Display Bedroom 1 logs", roomLogs_path(room: 3) %>
@@ -30,7 +30,7 @@
 
     <section id="room4" class="room">
       <h3>Bedroom 2 desired temp: <%= @room4Temp %></h3>
-      <h3>Current temp: <%= @room4Current %></h3>
+      <h3>Current temp: <span id="room4Reading"><%= @room4Current %></span></h3>
       <input id="room4Input">
       <button onclick="setTemp(4)">Set Temperature</button><br>
       <%= link_to "Display bedroom 2 logs", roomLogs_path(room: 4) %>

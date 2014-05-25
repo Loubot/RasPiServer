@@ -1,6 +1,7 @@
 class TempControllerController < ApplicationController
   require 'spreadsheet'
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :only => [:setTemp, :showRooms, :roomLogs, :roomsGraph]
+  skip_before_filter  :verify_authenticity_token
   def getTemp
     if SetTemp.exists?(room:params[:data])
       tempObject = SetTemp.where(room:params[:data])
@@ -12,6 +13,15 @@ class TempControllerController < ApplicationController
 
   def checkOk
     render json: 'ok'
+  end
+
+  def getCurrent
+    if TempLog.exists?(room:params[:data])
+      current = TempLog.where(room: params[:data]).last
+      render json: current
+    else 
+      render json: "Can't get record"
+    end
   end
 
   def setTemp

@@ -73,10 +73,11 @@ $(document).ready ->
 
 			$.when(getRoom1(), getRoom2(), getRoom3(), getRoom4(), getRoom5()).then (printThis, printThat, printThese, printThose, printBla) ->		
 				$('#room1Reading').text(printThis.reading)
+				$('#room1ReadingTime').text(printThis.updated_at)
 				$('#room2Reading').text(printThat.reading)
 				$('#room3Reading').text(printThese.reading)
 				$('#room4Reading').text(printThose.reading)
 				$('#room5Reading').text(printBla.reading)
-		, 60000
+		, 10000
 
 	

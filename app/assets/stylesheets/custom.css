@@ -7,6 +7,7 @@ section{
 
 #buttons{
 	text-align: center;		
+	display: block;
 }
 
 #recordHeader{
@@ -30,10 +31,11 @@ section{
 #roomsContainer{
 	height: 60%;
 	width: 90%;
-	min-height: 450px;
+	min-height: 590px;
 	margin-right: auto;
 	margin-left: auto;
-	overflow:auto;
+	clear: both;
+	
 }
 #topContainer{
 	width:95%;

@@ -15,7 +15,7 @@ module TempControllerHelper
       'No measurement recorded'
     else
       temp = TempLog.where(room:room).last
-      temp.reading.to_f
+      
     end
   end
 

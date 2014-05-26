@@ -71,13 +71,17 @@ $(document).ready ->
 
 
 
-			$.when(getRoom1(), getRoom2(), getRoom3(), getRoom4(), getRoom5()).then (printThis, printThat, printThese, printThose, printBla) ->		
-				$('#room1Reading').text(printThis.reading)
-				$('#room1ReadingTime').text(printThis.updated_at)
-				$('#room2Reading').text(printThat.reading)
-				$('#room3Reading').text(printThese.reading)
-				$('#room4Reading').text(printThose.reading)
-				$('#room5Reading').text(printBla.reading)
-		, 10000
+			$.when(getRoom1(), getRoom2(), getRoom3(), getRoom4(), getRoom5()).then (room1JSON, room2JSON, room3JSON, room4JSON, room5JSON) ->		
+				$('#room1Reading').text(room1JSON.reading)
+				$('#room1ReadingTime').text(room1JSON.updated_at)
+				$('#room2Reading').text(room2JSON.reading)
+				$('#room2ReadingTime').text(room2JSON.updated_at)
+				$('#room3Reading').text(room3JSON.reading)
+				$('#room3ReadingTime').text(room3JSON.updated_at)
+				$('#room4Reading').text(room4JSON.reading)
+				$('#room4ReadingTime').text(room4JSON.updated_at)
+				$('#room5Reading').text(room5JSON.reading)
+				$('#room5ReadingTime').text(room5JSON.updated_at)
+		, 60000
 
 	

@@ -10,5 +10,6 @@
 #
 
 class SetTemp < ActiveRecord::Base
+	Time.zone = 'London'
   attr_accessible :reading, :room
 end

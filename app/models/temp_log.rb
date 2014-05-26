@@ -10,5 +10,6 @@
 #
 
 class TempLog < ActiveRecord::Base
+	Time.zone = 'London'
   attr_accessible :reading, :room
 end

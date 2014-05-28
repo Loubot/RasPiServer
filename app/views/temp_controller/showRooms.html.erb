@@ -2,8 +2,13 @@
   <div id="topContainer">
     <section id="room1" class="room">
       <h3>Living Room desired temp: <%= @room1Temp %></h3>
-      <h3>Current temp: <span id="room1Reading"><%= @room1Current.reading.to_f %></span></h3>
-      <h3>Updated at: <span id="room1ReadingTime"><%= @room1Current.updated_at.strftime('%H:%M %m/%d/%Y') %></span></h3>
+      <% if @room1Current != 'No measurement recorded' %>
+        <h3>Current temp: <span id="room1Reading"><%= @room1Current.reading.to_f %></span></h3>      
+        <h3>Updated at: <span id="room1ReadingTime"><%= @room1Current.updated_at.strftime('%H:%M %m/%d/%Y') %></span></h3>
+      <% else %>
+        <h3>Current temp: <span id="room1Reading">No measurment recorded</span></h3>
+        <h3>Updated at: <span id="room1ReadingTime">No measurement recorded</span></h3>
+      <% end %>
       <input id="room1Input">
       <button onclick="setTemp(1)">Set Temperature</button><br>
       <%= link_to "Display Living Room logs", roomLogs_path(room: 1) %>
@@ -11,8 +16,13 @@
 
     <section id="room2" class="room">
       <h3>Kitchen desired temp: <%= @room2Temp %></h3>
-      <h3>Current temp: <span id="room2Reading"><%= @room2Current.reading.to_f %></span></h3>
-      <h3>Updated at: <span id="room2ReadingTime"><%= @room2Current.updated_at.strftime('%H:%M %m/%d/%Y') %></span></h3>
+      <% if @room2Current != 'No measurement recorded' %>
+        <h3>Current temp: <span id="room2Reading"><%= @room2Current.reading.to_f %></span></h3>      
+        <h3>Updated at: <span id="room2ReadingTime"><%= @room2Current.updated_at.strftime('%H:%M %m/%d/%Y') %></span></h3>
+      <% else %>
+        <h3>Current temp: <span id="room2Reading">No measurment recorded</span></h3>
+        <h3>Updated at: <span id="room2ReadingTime">No measurement recorded</span></h3>
+      <% end %>
       <input id="room2Input">
       <button onclick="setTemp(2)">Set Temperature</button><br>
       <%= link_to "Display Kitchen logs", roomLogs_path(room: 2) %>
@@ -24,8 +34,13 @@
   <div id="middleContainer" >
     <section id="room3" class="room">
       <h3>Bedroom 1 desired temp: <%= @room3Temp %></h3>
-      <h3>Current temp: <span id="room3Reading"><%= @room3Current.reading.to_f %></span></h3>
-      <h3>Updated at: <span id="room3ReadingTime"><%= @room3Current.updated_at.strftime('%H:%M %m/%d/%Y') %></span></h3>
+      <% if @room3Current != 'No measurement recorded' %>
+        <h3>Current temp: <span id="room3Reading"><%= @room3Current.reading.to_f %></span></h3>      
+        <h3>Updated at: <span id="room3ReadingTime"><%= @room3Current.updated_at.strftime('%H:%M %m/%d/%Y') %></span></h3>
+      <% else %>
+        <h3>Current temp: <span id="room2Reading">No measurment recorded</span></h3>
+        <h3>Updated at: <span id="room2ReadingTime">No measurement recorded</span></h3>
+      <% end %>
       <input id="room3Input">
       <button onclick="setTemp(3)">Set Temperature</button><br>
       <%= link_to "Display Bedroom 1 logs", roomLogs_path(room: 3) %>
@@ -33,8 +48,13 @@
 
     <section id="room4" class="room">
       <h3>Bedroom 2 desired temp: <%= @room4Temp %></h3>
-      <h3>Current temp: <span id="room4Reading"><%= @room4Current.reading.to_f %></span></h3>
-      <h3>Updated at: <span id="room4ReadingTime"><%= @room4Current.updated_at.strftime('%H:%M %m/%d/%Y') %></span></h3>
+      <% if @room4Current != 'No measurement recorded' %>
+        <h3>Current temp: <span id="room4Reading"><%= @room4Current.reading.to_f %></span></h3>      
+        <h3>Updated at: <span id="room4ReadingTime"><%= @room4Current.updated_at.strftime('%H:%M %m/%d/%Y') %></span></h3>
+      <% else %>
+        <h3>Current temp: <span id="room2Reading">No measurment recorded</span></h3>
+        <h3>Updated at: <span id="room2ReadingTime">No measurement recorded</span></h3>
+      <% end %>
       <input id="room4Input">
       <button onclick="setTemp(4)">Set Temperature</button><br>
       <%= link_to "Display bedroom 2 logs", roomLogs_path(room: 4) %>
@@ -44,8 +64,13 @@
 
   <div id="external">
     <section id="room5"> 
-      <h3>External Temperature: <%= @room5Current.reading.to_f %></h3>
-      <h3>Updated at: <span id="room5ReadingTime"><%= @room5Current.updated_at.strftime('%H:%M %m/%d/%Y') %></span></h3>
+      <% if @room5Current != 'No measurement recorded' %>
+        <h3>External Temperature: <%= @room5Current.reading.to_f %></h3>
+        <h3>Updated at: <span id="room5ReadingTime"><%= @room5Current.updated_at.strftime('%H:%M %m/%d/%Y') %></span></h3>
+      <% else %>
+        <h3>External Temperature: No measurment recorded</h3>
+        <h3>Updated at: <span id="room5ReadingTime">No measurment recorded</span></h3>
+      <% end %>
       <%= link_to "Display external temperature logs", roomLogs_path(room: 5) %>
     </section>
   <hr>

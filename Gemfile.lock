@@ -156,7 +156,6 @@ DEPENDENCIES
   binding_of_caller (= 0.7.2)
   coffee-rails (~> 3.2.1)
   devise (= 3.0.3)
-  execjs
   gon (= 5.0.1)
   highcharts-rails (~> 3.0.0)
   jquery-rails (= 3.1.0)

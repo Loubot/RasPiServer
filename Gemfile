@@ -46,7 +46,6 @@ gem 'tar2rubyscript'
 
 gem 'rubyscript2exe'
 
-gem 'execjs'
 
 
 # To use ActiveModel has_secure_password

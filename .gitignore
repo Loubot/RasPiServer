@@ -21,7 +21,7 @@ config/secrets.yml
 ## Environment normalisation:
 /.bundle
 /vendor/bundle
-/excel
+/excel/
 /tmp/
 /test/
 
